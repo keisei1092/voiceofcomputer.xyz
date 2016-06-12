@@ -16,10 +16,11 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.create(article_params)
+    return render 'new' if @article.title == "" || @article.content == ""
     if @article.save
       redirect_to article_path(:id => @article)
     else
-      render 'new'
+      return render 'new'
     end
   end
 
