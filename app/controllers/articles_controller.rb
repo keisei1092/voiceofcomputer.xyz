@@ -1,7 +1,7 @@
 # coding: utf-8
 
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :update, :edit:, :destroy]
+  before_action :set_article, only: [:show, :update, :edit, :destroy]
 
   def index
     @articles = Article.all
