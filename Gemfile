@@ -32,10 +32,14 @@ gem 'acts-as-taggable-on', '~> 3.4'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'rb-readline'
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
