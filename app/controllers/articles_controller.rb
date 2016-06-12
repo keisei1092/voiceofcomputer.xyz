@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :update, :edit, :destroy]
 
   def index
-    @articles = Article.all
+    @article = Article.last
   end
 
   def show
@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title)
+    params.require(:article).permit(:title, :content, :tag_list)
   end
 
   def set_article
