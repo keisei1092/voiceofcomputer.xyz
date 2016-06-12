@@ -1,0 +1,9 @@
+div.title
+  = @article.title
+div.content
+  = @article.content
+div.tags
+  - @article.tag_list.each do |tag|
+    | ##{tag}&nbsp;
+div.date
+  = @article.updated_at.strftime('20%y%m%d%H%M')
