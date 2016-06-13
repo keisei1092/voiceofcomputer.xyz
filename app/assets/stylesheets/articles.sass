@@ -7,7 +7,7 @@
     background-color: #000
     color: #FFF
     font-family: "YuGothic"
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: subpixel-antialiased
   
     input[type=submit]
       background-color: #FFF
@@ -56,6 +56,7 @@
           size: 25px
           weight: bold
         letter-spacing: 1.5px
+        -webkit-font-smoothing: antialiased
       .content
         margin: 15px 10px
         font:
@@ -106,12 +107,51 @@
           float: left
           margin: 0 8px
 
+  .form-title
+    font:
+      size: 25px
+      weight: bold
+    letter-spacing: 1.5px
+
+  .new_article
+    -webkit-font-smoothing: subpixel-antialiased
+
+    input
+      width: 100%
+      font-family: 'Futura', 'YuGothic'
+      background-color: #000
+      color: #FFF
+      border: none
+      margin-bottom: 10px
+
+      &:focus
+        outline: 0
+
+    textarea
+      width: 100%
+      font:
+        family: 'YuGothic'
+        weight: normal
+        size: 13px
+      letter-spacing: 2.5px
+      line-height: 2em
+      background-color: #000
+      color: #FFF
+      border: none
+      margin-bottom: 10px
+
+      &:focus
+        outline: 0
+
+    input[type=submit]
+      background-color: #000
+
 @media screen and (min-width: 769px)
   body
     background-color: #000
     color: #FFF
     font-family: "YuGothic"
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: subpixel-antialiased
   
     input[type=submit]
       background-color: #FFF
@@ -162,6 +202,7 @@
           size: 25px
           weight: bold
         letter-spacing: 1.5px
+        -webkit-font-smoothing: antialiased
       .content
         margin: 15px 10px
         font:
@@ -212,6 +253,12 @@
           float: left
           margin: 0 8px
 
+  .form-title
+    font:
+      size: 25px
+      weight: bold
+    letter-spacing: 1.5px
+
   .new_article
     -webkit-font-smoothing: subpixel-antialiased
 
@@ -220,24 +267,26 @@
       font-family: 'Futura', 'YuGothic'
       background-color: #000
       color: #FFF
-      border: solid 1px #FFF
+      border: none
       margin-bottom: 10px
 
       &:focus
         outline: 0
-        font-size: 12px
 
     textarea
       width: 100%
-      font-family: 'YuGothic'
+      font:
+        family: 'YuGothic'
+        size: 13px
+      letter-spacing: 2.5px
+      line-height: 2em
       background-color: #000
       color: #FFF
-      border: solid 1px #FFF
+      border: none
       margin-bottom: 10px
 
       &:focus
         outline: 0
-        font-size: 12px
 
     input[type=submit]
       background-color: #000
