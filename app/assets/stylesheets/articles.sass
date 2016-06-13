@@ -2,103 +2,212 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body
-  background-color: #000
-  color: #FFF
-  font-family: "YuGothic"
-  -webkit-font-smoothing: antialiased
-
-  input[type=submit]
-    background-color: #FFF
-
-  .header
-    width: 100%
-    height: 42px
-    position: fixed
-    padding: 4px 11px
-
-    .logo
-      float: left
-      img
-        width: 176.5px
+@media screen and (max-width: 768px)
+  body
+    background-color: #000
+    color: #FFF
+    font-family: "YuGothic"
+    -webkit-font-smoothing: antialiased
+  
+    input[type=submit]
+      background-color: #FFF
+  
+    .header
+      width: 100%
+      height: 42px
+      position: fixed
+      padding: 4px 11px
+  
+      .logo
+        float: left
+        background:
+          size: contain
+          repeat: no-repeat
+          image: url('voiceofcomputer_sp.png')
+        width: 176px
         height: 30px
-    .menu
-      float: right
-      margin:
-        top: 5px
-        right: 30px
-      .tag
-        float: left
+      .menu
+        float: right
         margin:
-          top: 4px
-          left: 8px
-          right: 8px
-      .home
-        float: left
+          top: 5px
+          right: 30px
+        .tag
+          float: left
+          margin:
+            top: 4px
+            left: 8px
+            right: 8px
+        .home
+          float: left
+          margin:
+            top: 3px
+            left: 8px
+            right: 8px
+        .about
+          float: left
+          margin: 0 8px
+  
+    .main
+      padding-top: 50px
+      margin: 0 5px
+  
+      .title
+        font:
+          size: 25px
+          weight: bold
+        letter-spacing: 1.5px
+      .content
+        margin: 15px 10px
+        font:
+          weight: normal
+          size: 13px
+        letter-spacing: 2.5px
+        line-height: 2em
+      .tags
+        text-align: right
+        margin: 0 10px
+      .date
+        font-family: 'Futura', 'YuGothic'
+        text-align: right
+        margin: 0 10px
+  
+    .footer
+      margin: 
+        top: 20px
+        left: 10px
+        right: 10px
+  
+      .arrow
+        float: right
+  
+        .left
+          float: left
+          margin: 0 8px
+        .right
+          float: left
+          margin: 0 8px
+  
+      .sns
+        float: right
         margin:
-          top: 3px
-          left: 8px
-          right: 8px
-      .about
-        float: left
-        margin: 0 8px
+          top: 5px
+          right: 20px
+  
+        .twitter
+          float: left
+          margin: 0 8px
+        .facebook
+          float: left
+          margin: 
+            left: 8px
+            right: 8px
+            bottom: 1px
+        .hatebu
+          float: left
+          margin: 0 8px
 
-  .main
-    padding-top: 50px
-    margin: 0 5px
-
-    .title
-      font:
-        size: 25px
-        weight: bold
-      letter-spacing: 1.5px
-    .content
-      margin: 15px 10px
-      font:
-        weight: normal
-        size: 13px
-      letter-spacing: 2.5px
-      line-height: 2em
-    .tags
-      text-align: right
-      margin: 0 10px
-    .date
-      font-family: 'Futura', 'YuGothic'
-      text-align: right
-      margin: 0 10px
-
-  .footer
-    margin: 
-      top: 20px
-      left: 10px
-      right: 10px
-
-    .arrow
-      float: right
-
-      .left
-        float: left
-        margin: 0 8px
-      .right
-        float: left
-        margin: 0 8px
-
-    .sns
-      float: right
-      margin:
-        top: 5px
-        right: 20px
-
-      .twitter
-        float: left
-        margin: 0 8px
-      .facebook
-        float: left
-        margin: 
-          left: 8px
-          right: 8px
-          bottom: 1px
-      .hatebu
-        float: left
-        margin: 0 8px
-
+@media screen and (min-width: 769px)
+  body
+    background-color: #000
+    color: #FFF
+    font-family: "YuGothic"
+    -webkit-font-smoothing: antialiased
+  
+    input[type=submit]
+      background-color: #FFF
+  
+    .header
+      width: 100%
+      height: 42px
+      position: fixed
+      padding: 4px 11px
+  
+      .logo
+        width: 150px
+        height: 100vh
+        position: absolute
+        top: -7px
+        left: -7px
+        background:
+          image: url('voiceofcomputer.png')
+          repeat: no-repeat
+          size: contain
+      .menu
+        float: right
+        margin:
+          top: 5px
+          right: 30px
+        .tag
+          float: left
+          margin:
+            top: 4px
+            left: 8px
+            right: 8px
+        .home
+          float: left
+          margin:
+            top: 3px
+            left: 8px
+            right: 8px
+        .about
+          float: left
+          margin: 0 8px
+  
+    .main
+      padding-top: 50px
+      margin: 0 170px
+  
+      .title
+        font:
+          size: 25px
+          weight: bold
+        letter-spacing: 1.5px
+      .content
+        margin: 15px 10px
+        font:
+          weight: normal
+          size: 13px
+        letter-spacing: 2.5px
+        line-height: 2em
+      .tags
+        text-align: right
+        margin: 0 10px
+      .date
+        font-family: 'Futura', 'YuGothic'
+        text-align: right
+        margin: 0 10px
+  
+    .footer
+      margin: 
+        top: 20px
+        left: 170px
+        right: 170px
+  
+      .arrow
+        float: right
+  
+        .left
+          float: left
+          margin: 0 8px
+        .right
+          float: left
+          margin: 0 8px
+  
+      .sns
+        float: right
+        margin:
+          top: 5px
+          right: 20px
+  
+        .twitter
+          float: left
+          margin: 0 8px
+        .facebook
+          float: left
+          margin: 
+            left: 8px
+            right: 8px
+            bottom: 1px
+        .hatebu
+          float: left
+          margin: 0 8px
