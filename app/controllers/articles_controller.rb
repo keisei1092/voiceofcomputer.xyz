@@ -2,6 +2,7 @@
 
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :update, :edit, :destroy]
+  before_filter :basic_authentication, only: [:new, :edit]
 
   def index
     @article = Article.last
@@ -49,5 +50,11 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+  end
+
+  def basic_authentication
+    authenticate_or_request_with_http_basic do |user, pass|
+      user == ENV['VOICEOFCOMPUTER_ADMIN_USER'] && pass == ENV['VOICEOFCOMPUTER_ADMIN_PASS']
+    end
   end
 end
