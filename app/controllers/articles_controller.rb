@@ -54,7 +54,7 @@ class ArticlesController < ApplicationController
 
   def basic_authentication
     authenticate_or_request_with_http_basic do |user, pass|
-      user == ENV['VOICEOFCOMPUTER_ADMIN_USER'] && pass == ENV['VOICEOFCOMPUTER_ADMIN_PASS']
+      user == config.admin_user && pass == config.admin_pass
     end
   end
 end
